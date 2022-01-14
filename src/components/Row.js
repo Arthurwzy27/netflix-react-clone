@@ -16,8 +16,6 @@ const Row = ({ title, fetchUrl, isLargeRow }) => {
     fetchData();
   }, [fetchUrl]); // variable fetchUrl is outside of the block so we need to pass it here!!
 
-  console.log(movies)
-
   return (
     <div className="row">
       <h2>{title}</h2>
