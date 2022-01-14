@@ -1,12 +1,13 @@
+import React from 'react';
+import './App'
+import Row from './Row';
 
-import './App.css';
-
-function App() {
+const App = () => {
   return (
-    <div className="App">
-
+    <div>
+      <Row title="NETFLIX ORIGINALS" />
     </div>
-  );
+  )
 }
 
 export default App;
