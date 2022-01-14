@@ -23,7 +23,10 @@ const Row = ({ title, fetchUrl }) => {
       <h2>{title}</h2>
       <div className="row__posters">
         {movies.map(movie => (
-          <img src={`${base_url}${movie.poster_path}`} alt={movie.title} />
+          <img
+            key={movie.id}
+            src={`${base_url}${movie.poster_path}`}
+            alt={movie.title} />
         ))}
       </div>
 
