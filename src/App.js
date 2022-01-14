@@ -1,5 +1,5 @@
 import React from 'react';
-import './App'
+import './App.scss';
 import Banner from './components/Banner';
 import Row from './components/Row';
 import requests from './requests';
