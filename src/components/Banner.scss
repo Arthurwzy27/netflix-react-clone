@@ -26,5 +26,9 @@
   .banner__button {
     margin: 0 5px;
     background-color: #D90C14;
+
+    &:hover {
+      background-color: #b92025;
+    }
   }
 }
