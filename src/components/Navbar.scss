@@ -1,5 +1,21 @@
 .navbar__header {
   background-color: transparent;
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  color: inherit;
+
+
+  .navbar__primary a {
+    color: inherit;
+    text-decoration: none;
+    justify-content: flex-start;
+    margin-left: 20px;
+
+    &:hover {
+      color: whitesmoke;
+    }
+  }
 }
 
 .navbar__logo {
