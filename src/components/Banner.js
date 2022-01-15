@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
+import './Banner.scss';
 import axios from '../axios';
 import requests from '../requests';
-import './Banner.scss';
+import Button from '@mui/material/Button';
+
 
 const Banner = () => {
   const [movie, setMovie] = useState([]);
@@ -35,8 +37,8 @@ const Banner = () => {
       <div className="banner__contents">
         <h1 className="banner__title">{movie?.name || movie?.original_name}</h1>
         <div className="banner__buttons">
-          <button className="banner__button">Play</button>
-          <button className="banner__button">My List</button>
+          <Button className="banner__button" variant="contained">Play</Button>
+          <Button className="banner__button" variant="contained">My List</Button>
           <h2 className="banner__description">{movie?.overview}</h2>
         </div>
       </div>
