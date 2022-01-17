@@ -1,7 +1,7 @@
 .banner {
   color: white;
   object-fit: contain;
-  height: 650px;
+  height: 600px;
 
   .banner__contents {
     margin-left: 30px;
@@ -16,6 +16,7 @@
   }
 
   .banner__description {
+    padding-top: 20px;
     width: 45rem;
     line-height: 1.3;
     font-size: 1.2rem;
