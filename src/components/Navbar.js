@@ -22,9 +22,10 @@ const Navbar = () => {
 
       </div>
       <div className="navbar__secondary">
-        <SearchIcon />
-        <Avatar sx={{ bgcolor: deepOrange[800] }} variant="square">N</Avatar>
-
+        <div className="navbar__secondary__group">
+          <SearchIcon />
+          <Avatar sx={{ bgcolor: deepOrange[800] }} variant="square">N</Avatar>
+        </div>
       </div>
     </div>
   )
