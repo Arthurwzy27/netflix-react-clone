@@ -1,6 +1,7 @@
 import { Link } from '@mui/material';
-import React from 'react';
-import './Navbar.scss';
+import React, { useEffect } from 'react';
+// import './Navbar.scss';
+import './Nav.scss';
 import SearchIcon from '@mui/icons-material/Search';
 import Avatar from '@mui/material/Avatar';
 import { deepOrange } from '@mui/material/colors';
@@ -15,18 +16,27 @@ import { deepOrange } from '@mui/material/colors';
 
 
 const Navbar = () => {
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      
+    });
+
+  }, []);
+
   return (
     // <BrowserRouter>
       <div className="navbar__header">
           <img className="navbar__logo" src="https://www.freepnglogos.com/uploads/netflix-logo-0.png" alt="Netflix-logo" href="#"/>
-        <div className="navbar__primary">
+        {/* <div className="navbar__primary">
           <ul>
             <Link to="/">Home</Link>
             <Link to="/series">Series</Link>
             <Link to="/movies">Movies</Link>
             <Link to="/trending">Trending Now</Link>
             <Link to="/list">My List</Link>
-          </ul>
+          </ul> */}
+
           {/* <Routes>
             <Route index path="/" element={<Home/>} />
             <Route path="/series" element={<Series/>} />
@@ -34,12 +44,15 @@ const Navbar = () => {
             <Route path="/trending" element={<Trending/>} />
             <Route path="/list" element={<List/>} />
           </Routes> */}
-        </div>
+
+        {/* </div> */}
+
         <div className="navbar__secondary">
-          <div className="navbar__secondary__group">
-            <SearchIcon />
-            <Avatar sx={{ bgcolor: deepOrange[800] }} variant="square">N</Avatar>
-          </div>
+          {/* <div className="navbar__secondary__group"> */}
+            {/* <SearchIcon /> */}
+            <Avatar className="navbar__avatar" sx={{ bgcolor: deepOrange[800] }} variant="square">N</Avatar>
+          {/* </div> */}
+
         </div>
       </div>
     // </BrowserRouter>

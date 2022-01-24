@@ -1,0 +1,44 @@
+.navbar__header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 30px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #111;
+
+  .navbar__logo {
+    position: fixed;
+    left: 20px;
+    width: 80px;
+    object-fit: contain;
+  }
+
+  .navbar__avatar {
+    position: fixed;
+    right: 20px;
+    width: 30px;
+    object-fit: contain;
+  }
+
+
+
+
+  .navbar__primary a {
+
+
+    &:hover {
+      color: rgb(228, 226, 226);
+    }
+  }
+
+  .navbar__secondary {
+
+
+    .navbar__secondary__group {
+
+    }
+  }
+
+}
