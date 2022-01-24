@@ -35,6 +35,7 @@ const Banner = () => {
       }}>
 
       <div className="banner__contents">
+      {/* <div className="banner-content-all"> */}
         <h1 className="banner__title">{movie?.name || movie?.original_name}</h1>
 
         <div className="banner__buttons">
@@ -45,7 +46,8 @@ const Banner = () => {
           <h2 className="banner__description">
             {truncate(movie?.overview, 300)}
           </h2>
-      </div>
+        </div>
+      {/* </div> */}
 
       <div className="banner__fade-bottom" />
     </header>
