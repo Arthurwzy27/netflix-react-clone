@@ -36,14 +36,18 @@ const Banner = () => {
 
       <div className="banner__contents">
         <h1 className="banner__title">{movie?.name || movie?.original_name}</h1>
+
         <div className="banner__buttons">
           <Button className="banner__button" variant="contained">Play</Button>
           <Button className="banner__button" variant="contained">My List</Button>
+        </div>
+
           <h2 className="banner__description">
             {truncate(movie?.overview, 300)}
           </h2>
-        </div>
       </div>
+
+      <div className="banner__fade-bottom" />
     </header>
   )
 }

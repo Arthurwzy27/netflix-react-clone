@@ -1,6 +1,5 @@
 .navbar__header {
   background-color: transparent;
-  // display: flex;
   display: grid;
   grid-template-areas: "left center right";
   align-items: center;
@@ -30,7 +29,6 @@
   .navbar__secondary {
     display: flex;
     align-items: center;
-    // justify-content: space-evenly;
     margin-left: 30px;
     padding-left: 100px;
 
