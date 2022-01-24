@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './Nav.scss';
-// import './Navbar.scss';
+
 
 const Navbar = () => {
 
@@ -25,16 +25,6 @@ const Navbar = () => {
         alt="Netflix-logo"
         href="#"
       />
-
-      {/* <ul>
-        <Link to="/">Home</Link>
-        <Link to="/series">Series</Link>
-        <Link to="/movies">Movies</Link>
-        <Link to="/trending">Trending Now</Link>
-        <Link to="/list">My List</Link>
-      </ul> */}
-
-      {/* <SearchIcon /> */}
 
       <img
         className="navbar__avatar"
