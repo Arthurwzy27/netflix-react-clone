@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, BrowserRouter, Routes, Route } from 'react-router-dom';
+// import { Link, BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.scss';
 import Banner from './components/Banner';
 import Navbar from './components/Navbar';
@@ -9,7 +9,6 @@ import Footer from './components/Footer';
 
 const App = () => {
   return (
-    <BrowserRouter >
       <div className="App">
         <div className="navbar__banner">
           <Navbar />
@@ -32,7 +31,6 @@ const App = () => {
         <Footer />
       </div>
       </div>
-    </BrowserRouter>
   );
 }
 

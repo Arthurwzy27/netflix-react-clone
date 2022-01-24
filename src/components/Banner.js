@@ -39,7 +39,9 @@ const Banner = () => {
         <div className="banner__buttons">
           <Button className="banner__button" variant="contained">Play</Button>
           <Button className="banner__button" variant="contained">My List</Button>
-          <h2 className="banner__description">{movie?.overview}</h2>
+          <h2 className="banner__description">
+            {movie?.overview}
+          </h2>
         </div>
       </div>
     </header>
