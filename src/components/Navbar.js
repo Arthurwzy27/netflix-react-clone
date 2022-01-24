@@ -1,61 +1,47 @@
-import { Link } from '@mui/material';
-import React, { useEffect } from 'react';
-// import './Navbar.scss';
+import React, { useState, useEffect } from 'react';
 import './Nav.scss';
-import SearchIcon from '@mui/icons-material/Search';
-import Avatar from '@mui/material/Avatar';
-import { deepOrange } from '@mui/material/colors';
-// import { Link, BrowserRouter, Routes, Route } from 'react-router-dom';
-// import Home from './homePage';
-// import Series from './series';
-// import Movies from './movies';
-// import Trending from './trending';
-// import List from './list';
-
-
-
+// import './Navbar.scss';
 
 const Navbar = () => {
 
+  const [show, handleShow] = useState(false)
+
   useEffect(() => {
     window.addEventListener("scroll", () => {
-      
+      if (window.scrollY > 100) {
+        handleShow(true);
+      } else handleShow(false);
     });
-
+    return () => {
+      window.removeEventListener("scroll");
+    }
   }, []);
 
   return (
-    // <BrowserRouter>
-      <div className="navbar__header">
-          <img className="navbar__logo" src="https://www.freepnglogos.com/uploads/netflix-logo-0.png" alt="Netflix-logo" href="#"/>
-        {/* <div className="navbar__primary">
-          <ul>
-            <Link to="/">Home</Link>
-            <Link to="/series">Series</Link>
-            <Link to="/movies">Movies</Link>
-            <Link to="/trending">Trending Now</Link>
-            <Link to="/list">My List</Link>
-          </ul> */}
+    <div className={`navbar ${show && "navbar__black"}`}>
+      <img
+        className="navbar__logo"
+        src="https://www.freepnglogos.com/uploads/netflix-logo-0.png"
+        alt="Netflix-logo"
+        href="#"
+      />
 
-          {/* <Routes>
-            <Route index path="/" element={<Home/>} />
-            <Route path="/series" element={<Series/>} />
-            <Route path="/movies" element={<Movies/>} />
-            <Route path="/trending" element={<Trending/>} />
-            <Route path="/list" element={<List/>} />
-          </Routes> */}
+      {/* <ul>
+        <Link to="/">Home</Link>
+        <Link to="/series">Series</Link>
+        <Link to="/movies">Movies</Link>
+        <Link to="/trending">Trending Now</Link>
+        <Link to="/list">My List</Link>
+      </ul> */}
 
-        {/* </div> */}
+      {/* <SearchIcon /> */}
 
-        <div className="navbar__secondary">
-          {/* <div className="navbar__secondary__group"> */}
-            {/* <SearchIcon /> */}
-            <Avatar className="navbar__avatar" sx={{ bgcolor: deepOrange[800] }} variant="square">N</Avatar>
-          {/* </div> */}
-
-        </div>
-      </div>
-    // </BrowserRouter>
+      <img
+        className="navbar__avatar"
+        src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png"
+        alt="Netflix-avatar"
+      />
+    </div>
   )
 }
 
